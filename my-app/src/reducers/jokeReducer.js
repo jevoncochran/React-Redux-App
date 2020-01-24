@@ -34,8 +34,8 @@ export const jokeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: false,
-                joke: action.payload,
-                answer: action.payload,
+                // joke: action.payload,
+                answer: true,
             }
         default:
             return state;
