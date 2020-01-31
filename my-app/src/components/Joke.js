@@ -23,16 +23,18 @@ const Joke = props => {
                 {/* conditionally renders 'Let's see button' */}
                 {!props.joke && <button onClick={props.getJoke}>Let's see!</button>}
 
-                {/* conditionally renders joke setup */}
-                {props.joke && !props.isFetching && !props.answer && <p>{props.joke[0].setup}</p>}
+                <div className="joke-div">
+                    {/* conditionally renders joke setup */}
+                    {props.joke && !props.isFetching && !props.answer && <p>{props.joke[0].setup}</p>}
 
-                {/* conditionally renders joke punchline  */}
-                {props.joke && props.answer && !props.isFetching && 
-                <div>
-                    <p>{props.joke[0].setup}</p>
-                    <p>{props.joke[0].punchline}</p>
+                    {/* conditionally renders joke punchline  */}
+                    {props.joke && props.answer && !props.isFetching && 
+                    <div>
+                        <p>{props.joke[0].setup}</p>
+                        <p>{props.joke[0].punchline}</p>
+                    </div>
+                    }
                 </div>
-                }
 
                 {/* conditionally renders "Get Answer" button */}
                 {!props.answer && props.joke && <button onClick={props.getAnswer}>Get Answer</button>}

@@ -16,15 +16,6 @@ export const getJoke = () => dispatch => { // implicit return
         .catch(err => console.log(err))
 };
 
-// export const getAnswer = joke => dispatch => {
-//     dispatch({ type: FETCH_ANSWER_START });
-//     axios.get('https://official-joke-api.appspot.com/jokes/programming/random')
-//     .then(res => {
-//         dispatch({ type: FETCH_ANSWER_SUCCESS, payload: joke.punchline })
-//     })
-//     .catch(err => console.log(err))
-// }
-
 export const getAnswer = answer => {
     return { type: FETCH_ANSWER_SUCCESS }
 }
